@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-based AR Ads</title>
+  
+  <!-- Load A-Frame in the head -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> <!-- Compatible A-Frame version -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script> <!-- Three.js version 0.125 -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.min.js"></script> <!-- AR.js -->
+</head>
+<body style="margin: 0; overflow: hidden;">
+  
+  <!-- AR.js Scene -->
+  <a-scene embedded arjs>
+    <!-- Camera Setup -->
+    <a-marker-camera preset="hiro"></a-marker-camera>
+
+    <!-- Placeholder for AR Ad -->
+    <a-entity id="ad-container" position="0 0 -2" rotation="0 180 0" scale="1 1 1"></a-entity>
+  </a-scene>
+  
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
